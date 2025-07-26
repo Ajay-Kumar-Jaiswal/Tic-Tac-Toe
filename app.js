@@ -33,29 +33,29 @@ PokiSDK.init().then(() => {
 });
 
 // When the player starts playing
-function onPlayStart() {
-  PokiSDK.gameplayStart();
-  // Show the game UI and start the game logic
-}
+// function onPlayStart() {
+//   PokiSDK.gameplayStart();
+//   // Show the game UI and start the game logic
+// }
 
-// When gameplay pauses or ends (before showing ads)
-function onPlayStop() {
-  PokiSDK.gameplayStop();
-}
+// // When gameplay pauses or ends (before showing ads)
+// function onPlayStop() {
+//   PokiSDK.gameplayStop();
+// }
 
-// When showing ads before resuming gameplay
-function resetWithAd() {
-  PokiSDK.gameplayStop();  // mark as stopped before ad
-  PokiSDK.commercialBreak()
-    .then(() => {
-      PokiSDK.gameplayStart(); // resume gameplay after ad
-      reset(); // your game reset logic
-    })
-    .catch(() => {
-      PokiSDK.gameplayStart(); // still resume even if ad fails
-      reset();
-    });
-}
+// // When showing ads before resuming gameplay
+// function resetWithAd() {
+//   PokiSDK.gameplayStop();  // mark as stopped before ad
+//   PokiSDK.commercialBreak()
+//     .then(() => {
+//       PokiSDK.gameplayStart(); // resume gameplay after ad
+//       reset(); // your game reset logic
+//     })
+//     .catch(() => {
+//       PokiSDK.gameplayStart(); // still resume even if ad fails
+//       reset();
+//     });
+// }
 
 
 // Show main menu UI and push state for history
@@ -232,16 +232,16 @@ const comove=()=>{
 
 
 
-function showAdLoadingIndicator() {
-  // show overlay or spinner
-  const indicator = document.getElementById("ad-loading-indicator");
-  if (indicator) indicator.style.display = "flex";
-}
+// function showAdLoadingIndicator() {
+//   // show overlay or spinner
+//   const indicator = document.getElementById("ad-loading-indicator");
+//   if (indicator) indicator.style.display = "flex";
+// }
 
-function hideAdLoadingIndicator() {
-  const indicator = document.getElementById("ad-loading-indicator");
-  if (indicator) indicator.style.display = "none";
-}
+// function hideAdLoadingIndicator() {
+//   const indicator = document.getElementById("ad-loading-indicator");
+//   if (indicator) indicator.style.display = "none";
+// }
 
 const reset=()=>{
     turn=true;
@@ -306,8 +306,8 @@ const checkWinner=()=>{
 }
 
 
-newbtn.addEventListener("click",resetWithAd);
-resbtn.addEventListener("click",resetWithAd);
+newbtn.addEventListener("click",reset);
+resbtn.addEventListener("click",reset);
 
 // Initialize on first load (to set history state for main)
 history.replaceState({ page: "main" }, "", "");
