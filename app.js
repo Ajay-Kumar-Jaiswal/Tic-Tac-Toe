@@ -27,10 +27,10 @@ const combinations = [
 
 
 // Initialization
-PokiSDK.init().then(() => {
-  console.log("Poki SDK initialized");
-  // Possibly display your main menu here
-});
+// PokiSDK.init().then(() => {
+//   console.log("Poki SDK initialized");
+//   // Possibly display your main menu here
+// });
 
 // When the player starts playing
 // function onPlayStart() {
