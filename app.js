@@ -26,38 +26,6 @@ const combinations = [
 
 
 
-// Initialization
-// PokiSDK.init().then(() => {
-//   console.log("Poki SDK initialized");
-//   // Possibly display your main menu here
-// });
-
-// When the player starts playing
-// function onPlayStart() {
-//   PokiSDK.gameplayStart();
-//   // Show the game UI and start the game logic
-// }
-
-// // When gameplay pauses or ends (before showing ads)
-// function onPlayStop() {
-//   PokiSDK.gameplayStop();
-// }
-
-// // When showing ads before resuming gameplay
-// function resetWithAd() {
-//   PokiSDK.gameplayStop();  // mark as stopped before ad
-//   PokiSDK.commercialBreak()
-//     .then(() => {
-//       PokiSDK.gameplayStart(); // resume gameplay after ad
-//       reset(); // your game reset logic
-//     })
-//     .catch(() => {
-//       PokiSDK.gameplayStart(); // still resume even if ad fails
-//       reset();
-//     });
-// }
-
-
 // Show main menu UI and push state for history
 function showMainMenu() {
   startgame.classList.remove("hide");
@@ -230,18 +198,6 @@ const comove=()=>{
     makemove(randomIndex);
 }
 
-
-
-// function showAdLoadingIndicator() {
-//   // show overlay or spinner
-//   const indicator = document.getElementById("ad-loading-indicator");
-//   if (indicator) indicator.style.display = "flex";
-// }
-
-// function hideAdLoadingIndicator() {
-//   const indicator = document.getElementById("ad-loading-indicator");
-//   if (indicator) indicator.style.display = "none";
-// }
 
 const reset=()=>{
     turn=true;
